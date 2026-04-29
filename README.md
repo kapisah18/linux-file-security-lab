@@ -3,6 +3,7 @@
 ## 📌 Description
 
 This project demonstrates a **basic file security and malware analysis workflow** performed in a controlled Linux environment.
+This project simulates a basic SOC workflow for analyzing suspicious files using static analysis and antivirus scanning techniques.
 It focuses on identifying disguised files, analyzing file contents, generating hashes, and scanning files for malware using command-line tools.
 
 ---
@@ -89,12 +90,13 @@ clamscan -r samples/
 ---
 
 ## 🔍 Observations
-
-* Detected mismatch between file extension and actual file type
-* Identified readable content inside disguised files
-* Verified file integrity using hash values
-* Successfully scanned files for known malware signatures
-
+- File extension can be manipulated to hide true file type  
+- Static analysis reveals hidden content in suspicious files  
+- Antivirus tools detect known malware using signature databases  
+---
+## 🎯 Attack Scenario
+An attacker disguises a malicious script as a PDF file (invoice.pdf) to trick users into executing it.
+This lab demonstrates how such deception can be detected using file inspection techniques.
 ---
 
 ## ⚠️ Risks Identified
@@ -159,6 +161,7 @@ Infected files: 0
 ## 🛡️ Security Insight
 
 This lab demonstrates how attackers disguise malicious files and how defenders can detect them using simple yet effective analysis techniques.
+This lab highlights the importance of static analysis before execution in malware investigation workflows.
 
 ---
 
